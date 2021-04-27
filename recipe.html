@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Green Kitchen</title>
+    <meta name="description" content="Welcome to the green kitchen! Find the recipe for your next meat free meal today." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <section class="header-top">
+            <a href="index.html"><img class="logo" src="visuals/TGK-LOGO.png" alt="logo"></a>
+        </section>
+        <label for="hamburger">
+            <div id="hamburger-icon">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </label>
+          <input type="checkbox" id="hamburger">
+        <nav>
+            <ul>
+                <li><a href="allrecipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="image-modal"></div>
+    <main>
+        <section class="recipe-container">
+            <div class="breadcrumbs">
+                <p><a href="index.html">Home </a></p>
+                <p><a href="allrecipes.html"> / All Recipes</a></p>
+                <div class="current-page"></div>
+            </div>
+            <div class="loading">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+            <div class="name-container"></div>
+            <div class="intro-container"></div>
+            <div class="image-container"></div>
+            <div class="instruction-container"></div>
+            <hr>
+            <div class="comments-container"></div>
+        </section>
+
+    </main>
+    <footer>
+        <h3>Follow us on social media</h3>
+        <p>Facebook</p>
+        <p>Youtube</p>
+        <p>Instagram</p>
+        <h3>Browse more</h3>
+    </footer>
+    <script src="js/displayError.js"></script>
+    <script src="js/recipe.js"></script>
+</body>
+</html>
