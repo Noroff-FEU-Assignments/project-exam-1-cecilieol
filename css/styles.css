@@ -46,13 +46,13 @@ a {
 
 .header-top {
   background-color: #eee;
-  padding: 30px;
-  height: 97px;
+  padding: 20px 0 30px 20px;
+  height: 60px;
   margin: 0;
 }
 
 .logo {
-  width: 80%;
+  width: 50%;
 }
 
 nav {
@@ -73,7 +73,7 @@ nav {
   background-color: rgb(140, 199, 140);
   display: block;
   position: absolute;
-  padding: 53px 30px 53px 30px;
+  padding: 34px 15px 33px 15px;
   right: 0;
   top: 0;
 }
@@ -81,8 +81,8 @@ nav {
 .bar1,
 .bar2,
 .bar3 {
-  width: 70px;
-  height: 10px;
+  width: 50px;
+  height: 8px;
   margin: 5px;
   border-radius: 5px;
   background-color: #000;
@@ -378,13 +378,15 @@ footer {
 
 /* MEDIA */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
+  .header-top {
+    height: 90px;
+  }
+
   .logo {
     width: auto;
   }
-}
 
-@media screen and (min-width: 900px) {
   .header-top {
     display: flex;
     justify-content: center;
