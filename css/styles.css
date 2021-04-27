@@ -1,0 +1,469 @@
+/* General */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+main {
+  margin-left: 15px;
+  margin-right: 15px;
+  max-width: 1200px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p,
+li {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumbs {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-flex;
+}
+
+.breadcrumbs p {
+  font-size: 16px;
+}
+
+/* Header */
+
+.header-top {
+  background-color: #eee;
+  padding: 30px;
+  height: 97px;
+  margin: 0;
+}
+
+.logo {
+  width: 80%;
+}
+
+nav {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}
+
+#hamburger:checked ~ nav {
+  display: block;
+  background-color: rgb(140, 199, 140);
+  padding: 10px;
+}
+
+#hamburger-icon {
+  background-color: rgb(140, 199, 140);
+  display: block;
+  position: absolute;
+  padding: 53px 30px 53px 30px;
+  right: 0;
+  top: 0;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 70px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+nav li {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  line-height: 200%;
+  font-size: 25px;
+  color: black;
+  margin: 5px 30px 5px 30px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* API loader */
+
+.loading {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.loading-dot {
+  animation: dot-keyframes 1s infinite ease-in-out;
+  background-color: rgb(2, 39, 16);
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.33s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.66s;
+}
+
+@keyframes dot-keyframes {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* Carousel slider */
+
+.latest-container {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.latest-slides {
+  position: relative;
+}
+
+.latest-slides img {
+  width: 100%;
+}
+
+.latest-item {
+  width: 100%;
+  display: none;
+  margin-bottom: 0;
+}
+
+.latest-item:first-child {
+  display: block;
+}
+
+.latest-item h2 {
+  position: relative;
+  width: 100%;
+  margin-top: -10px;
+  text-align: center;
+  background-color: rgb(140, 199, 140);
+}
+
+.arrow-container {
+  display: flex;
+  max-width: 1200px;
+  width: 95%;
+  justify-content: space-between;
+  top: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(140, 199, 140);
+  cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgb(83, 172, 83);
+}
+
+.dot-container {
+  text-align: center;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  margin: 4px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dot:hover,
+.active {
+  background-color: rgb(140, 199, 140);
+}
+
+/* Filter and sort */
+
+.viewing-options {
+  text-align: center;
+}
+
+/* Recipe grid */
+
+.sorting {
+  display: inline-flex;
+}
+
+.sorting p {
+  margin: 15px;
+}
+
+.all-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.single-recipe {
+  margin: 15px;
+}
+
+.single-recipe img {
+  display: block;
+  width: 100%;
+}
+
+.view-more-recipes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-button {
+  background-color: seagreen;
+  color: white;
+  font-size: 16px;
+  margin: 15px;
+  width: 100px;
+  height: 30px;
+}
+
+/* Recipe page */
+
+.image-container img {
+  width: 100%;
+}
+
+.comments-container {
+  display: block;
+}
+
+.comments-container h3 {
+  border-bottom: 1px solid #aaa;
+}
+
+.comments-container fieldset {
+  background-color: #eee;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Image modal */
+
+.image-modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+  margin-top: -250px;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 3000px;
+}
+
+.image-modal img {
+  max-width: 1200px;
+}
+
+.modal-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 15px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* Contact */
+
+.form {
+  margin-bottom: 35px;
+  width: 95%;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.form p {
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 99%;
+  height: 20px;
+  font-size: 14px;
+}
+
+#message {
+  width: 99%;
+  height: 200px;
+  max-width: 1165px;
+  font-size: 14px;
+}
+
+.form-error {
+  color: red;
+  display: none;
+}
+
+.submit-button {
+  margin-top: 10px;
+  width: 100%;
+  height: 25px;
+  background-color: rgb(140, 199, 140);
+  color: black;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitted-form {
+  margin: auto;
+  color: green;
+}
+
+/* Footer */
+
+footer {
+  background-color: rgb(140, 199, 140);
+  height: auto;
+  padding: 15px;
+  text-align: center;
+}
+
+/* MEDIA */
+
+@media screen and (min-width: 700px) {
+  .logo {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-top {
+    display: flex;
+    justify-content: center;
+  }
+
+  #hamburger-icon {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(140, 199, 140);
+    width: 100%;
+    height: auto;
+  }
+
+  nav ul {
+    margin: 5px;
+  }
+
+  nav li {
+    display: inline-flex;
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .arrow-container {
+    top: 70%;
+  }
+
+  .viewing-options {
+    text-align: left;
+    float: left;
+    margin-right: 50px;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .single-recipe img {
+    width: 300px;
+  }
+
+  .sorting {
+    display: block;
+  }
+
+  .sorting p {
+    margin: 0px;
+  }
+
+  .image-container img {
+    width: 60%;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  .image-modal {
+    text-align: center;
+  }
+
+  .image-modal img {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .image-modal img {
+    max-width: 1500px;
+  }
+}
