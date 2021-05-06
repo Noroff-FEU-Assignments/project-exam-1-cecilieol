@@ -133,13 +133,14 @@ nav a:hover {
 
 nav input[type="text"] {
   width: 90%;
-  height: 30px;
+  height: 10px;
   margin: 15px;
   border: none;
   border-radius: 4px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
 
 /* API loader */
@@ -216,11 +217,11 @@ nav input[type="text"] {
   position: relative;
   width: 100%;
   max-width: 900px;
-  margin-top: -10px;
+  margin-top: -47px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 0 10px 0;
-  background-color: rgb(140, 199, 140);
+  background-color: rgb(140, 199, 140, 0.8);
 }
 
 .arrow-container {
