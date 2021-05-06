@@ -112,13 +112,34 @@ nav li {
 nav a {
   text-decoration: none;
   line-height: 200%;
-  font-size: 25px;
+  font-size: 22px;
   color: black;
   margin: 5px 30px 5px 30px;
 }
 
 nav a:hover {
   text-decoration: none;
+}
+
+.search-bar-mobile {
+  display: flex;
+}
+
+.search-bar-mobile img {
+  margin: 15px 15px 0 0;
+  width: 30px;
+  height: 30px;
+}
+
+nav input[type="text"] {
+  width: 80%;
+  height: 30px;
+  margin: 15px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* API loader */
@@ -204,9 +225,9 @@ nav a:hover {
 
 .arrow-container {
   display: flex;
-  max-width: 1200px;
-  width: 95%;
   justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -505,24 +526,21 @@ footer {
 
   .form {
     width: 90%;
-}
-
-@media screen and (min-width: 700px) {
-  .logo {
-    width: auto;
   }
 }
 
 @media screen and (min-width: 900px) {
   .breadcrumbs {
-    background-color: #eee;
+    background-color: #fefefe;
+  }
+
+  .logo {
+    width: auto;
   }
 
   .header-top {
     height: 90px;
-  }
-
-  .header-top {
+    background-color: #fefefe;
     display: flex;
     justify-content: center;
   }
@@ -534,7 +552,7 @@ footer {
   nav {
     display: flex;
     justify-content: center;
-    background-color: rgb(140, 199, 140);
+    background-color: rgb(176, 228, 176);
     width: 100%;
     height: auto;
   }
@@ -546,12 +564,12 @@ footer {
   nav li {
     display: inline-flex;
     text-align: center;
-    margin-left: 60px;
-    margin-right: 60px;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 
-  .arrow-container {
-    justify-content: space-around;
+  .search-bar-mobile {
+    display: none;
   }
 
   .quick-item,
