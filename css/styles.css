@@ -126,7 +126,7 @@ nav a:hover {
 }
 
 .search-bar-mobile img {
-  margin: 15px 15px 0 0;
+  margin: 15px 15px 0 10px;
   width: 30px;
   height: 30px;
 }
