@@ -68,7 +68,7 @@ a {
 }
 
 .logo {
-  width: 70%;
+  width: 60%;
 }
 
 nav {
@@ -481,6 +481,34 @@ footer {
 }
 
 /* MEDIA */
+
+@media screen and (max-width: 400px) {
+  .header-top {
+    background-color: #eee;
+    padding: 20px 0 20px 20px;
+    height: 50px;
+    margin: 0;
+  }
+
+  .logo {
+    width: 60%;
+  }
+
+  #hamburger:checked ~ nav {
+    display: block;
+    background-color: rgb(140, 199, 140);
+    padding: 10px;
+  }
+
+  #hamburger-icon {
+    background-color: rgb(140, 199, 140);
+    display: block;
+    position: absolute;
+    padding: 20px 15px 20px 15px;
+    right: 0;
+    top: 0;
+  }
+}
 
 @media screen and (min-width: 700px) {
   .logo {
