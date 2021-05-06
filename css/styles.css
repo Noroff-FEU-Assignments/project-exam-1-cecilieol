@@ -12,19 +12,30 @@ main {
 
 h1 {
   font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  text-align: center;
 }
 
 h2 {
   font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
 }
 
 h3 {
   font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
 }
 
 p,
 li {
   font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -32,10 +43,15 @@ a {
   color: black;
 }
 
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
 .breadcrumbs {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-left: 10px;
   display: inline-flex;
+  width: 100%;
+  height: auto;
 }
 
 .breadcrumbs p {
@@ -46,7 +62,7 @@ a {
 
 .header-top {
   background-color: #eee;
-  padding: 20px 0 30px 20px;
+  padding: 20px 0 24px 20px;
   height: 60px;
   margin: 0;
 }
@@ -73,7 +89,7 @@ nav {
   background-color: rgb(140, 199, 140);
   display: block;
   position: absolute;
-  padding: 34px 15px 33px 15px;
+  padding: 30px 15px 30px 15px;
   right: 0;
   top: 0;
 }
@@ -102,7 +118,7 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* API loader */
@@ -150,6 +166,8 @@ nav a:hover {
   width: 100%;
   max-width: 1200px;
   overflow: hidden;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .latest-slides {
@@ -158,23 +176,29 @@ nav a:hover {
 
 .latest-slides img {
   width: 100%;
+  max-width: 900px;
+  margin: 0;
 }
 
 .latest-item {
   width: 100%;
   display: none;
-  margin-bottom: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .latest-item:first-child {
   display: block;
 }
 
-.latest-item h2 {
+.latest-item h3 {
   position: relative;
   width: 100%;
+  max-width: 900px;
   margin-top: -10px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0 10px 0;
   background-color: rgb(140, 199, 140);
 }
 
@@ -183,8 +207,6 @@ nav a:hover {
   max-width: 1200px;
   width: 95%;
   justify-content: space-between;
-  top: 50%;
-  position: absolute;
   cursor: pointer;
 }
 
@@ -194,6 +216,7 @@ nav a:hover {
   border: none;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   background-color: rgb(140, 199, 140);
   cursor: pointer;
 }
@@ -212,14 +235,39 @@ nav a:hover {
   width: 20px;
   margin: 4px;
   border-radius: 50%;
+  border: none;
   background-color: #ddd;
   cursor: pointer;
   display: inline-block;
 }
 
 .dot:hover,
-.active {
+.current {
   background-color: rgb(140, 199, 140);
+}
+
+.quick-recipes,
+.weekend-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.featured-headline {
+  text-align: center;
+}
+
+.quick-item,
+.weekend-item {
+  margin: 10px;
+}
+
+.quick-item img,
+.weekend-item img {
+  display: block;
+  width: 100%;
 }
 
 /* Filter and sort */
@@ -242,10 +290,24 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .single-recipe {
+  display: none;
   margin: 15px;
+}
+
+.single-recipe:nth-child(1),
+.single-recipe:nth-child(2),
+.single-recipe:nth-child(3),
+.single-recipe:nth-child(4),
+.single-recipe:nth-child(5),
+.single-recipe:nth-child(6),
+.single-recipe:nth-child(7),
+.single-recipe:nth-child(8),
+.single-recipe:nth-child(9) {
+  display: block;
 }
 
 .single-recipe img {
@@ -259,7 +321,8 @@ nav a:hover {
   align-items: center;
 }
 
-.more-button {
+#more-button {
+  display: none;
   background-color: seagreen;
   color: white;
   font-size: 16px;
@@ -270,7 +333,33 @@ nav a:hover {
 
 /* Recipe page */
 
+.intro-container p {
+  text-align: center;
+}
+
 .image-container img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.ingredients-container h3,
+.ingredients-container ol,
+.ingredients-container p,
+.instruction-container h3,
+.instruction-container ul {
+  display: none;
+}
+
+.recipe-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ingredients-container {
+  width: 100%;
+}
+
+.instruction-container {
   width: 100%;
 }
 
@@ -296,37 +385,52 @@ nav a:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  padding-top: 200px;
+  padding-top: 300px;
   margin-top: -250px;
-  background-color: rgba(0, 0, 0, 0.5);
   max-width: 3000px;
+  background-color: rgb(0, 0, 0, 0.5);
 }
 
 .image-modal img {
   max-width: 1200px;
 }
 
-.modal-content {
-  margin-left: auto;
-  margin-right: auto;
+#hamburger:checked ~ .image-modal {
+  padding-top: 200px;
+  margin-top: -350px;
 }
 
-.close {
+.close-modal {
   position: absolute;
-  background-color: white;
+  background-color: rgb(140, 199, 140);
   color: black;
-  width: 15px;
-  height: 25px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
+}
+
+.close-modal:hover {
+  background-color: rgb(83, 172, 83);
 }
 
 /* Contact */
 
+.contact-intro {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
 .form {
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 35px;
   width: 95%;
   border: 1px solid black;
   padding: 20px;
+  max-width: 800px;
 }
 
 .form p {
@@ -378,13 +482,19 @@ footer {
 
 /* MEDIA */
 
-@media screen and (min-width: 900px) {
-  .header-top {
-    height: 90px;
-  }
-
+@media screen and (min-width: 700px) {
   .logo {
     width: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .breadcrumbs {
+    background-color: #eee;
+  }
+
+  .header-top {
+    height: 90px;
   }
 
   .header-top {
@@ -416,7 +526,12 @@ footer {
   }
 
   .arrow-container {
-    top: 70%;
+    justify-content: space-around;
+  }
+
+  .quick-item,
+  .weekend-item {
+    width: 250px;
   }
 
   .viewing-options {
@@ -441,19 +556,32 @@ footer {
     margin: 0px;
   }
 
-  .image-container img {
-    width: 60%;
-    float: right;
-    margin-left: 30px;
-    margin-bottom: 10px;
+  .recipe-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .image-modal {
     text-align: center;
+    width: 100%;
+    padding-top: 70px;
   }
 
   .image-modal img {
-    max-width: 1000px;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .ingredients-container {
+    width: 450px;
+    margin-right: 25px;
+  }
+
+  .instruction-container {
+    width: 450px;
+    margin-left: 25px;
   }
 }
 
