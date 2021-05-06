@@ -502,6 +502,9 @@ footer {
     right: 0;
     top: 0;
   }
+
+  .form {
+    width: 90%;
 }
 
 @media screen and (min-width: 700px) {
