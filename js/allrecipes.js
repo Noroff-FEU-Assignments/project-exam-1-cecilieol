@@ -3,8 +3,7 @@
 const url = "https://cecilieol.no/the-green-kitchen/wp-json/wp/v2/posts?_embed&per_page=20";
 
 const recipeContainer = document.querySelector(".all-recipes");
-const moreContainer = document.querySelector(".view-more-recipes");
-const moreButton = document.querySelector(".more-button");
+const moreButton= document.querySelector("#more-button");
 
 async function getRecipes() {
     try {
@@ -27,7 +26,7 @@ async function getRecipes() {
                                             </div>`;
 
 
-            moreContainer.innerHTML = `<button class="more-button">View more</button>`;
+            moreButton.style.display = "block";
 
 
         }
@@ -44,4 +43,25 @@ async function getRecipes() {
 }
 
 getRecipes();
+
+
+let defaultItems = 9;
+
+moreButton.addEventListener("click", (e) => {
+
+    const singleRecipes = document.querySelectorAll(".single-recipe");
+
+    for (let i = defaultItems; i < defaultItems + 3; i++) {
+        if (defaultItems < singleRecipes.length) {
+            singleRecipes[i].style.display = "block";
+        }
+    }
+
+    defaultItems += 3;
+
+    if (defaultItems >= singleRecipes.length) {
+        moreButton.style.display = "none";
+    }
+})
+
 
