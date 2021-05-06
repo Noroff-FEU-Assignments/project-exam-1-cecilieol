@@ -1,13 +1,13 @@
-
+// API CALL
 
 const titleContainer = document.querySelector("title");
 const modalContainer = document.querySelector(".image-modal");
 const breadcrumbContainer = document.querySelector(".current-page")
-const closeButton = document.querySelector(".close");
 const recipeContainer = document.querySelector(".recipe.container");
 const introContainer = document.querySelector(".intro-container");
 const nameContainer = document.querySelector(".name-container");
 const imageContainer = document.querySelector(".image-container");
+const ingredientsContainer = document.querySelector(".ingredients-container");
 const instructionContainer = document.querySelector(".instruction-container");
 const commentsContainer = document.querySelector(".comments-container");
 const loader = document.querySelector(".loading");
@@ -34,16 +34,18 @@ async function fetchRecipe () {
         titleContainer.innerHTML = `The Green Kitchen - ${recipe.title.rendered}`;
         breadcrumbContainer.innerHTML = `<p> / ${recipe.title.rendered}</p>`;
         nameContainer.innerHTML = `<h1>${recipe.title.rendered}</h1>`;
-        introContainer.innerHTML = `<h3>${recipe.excerpt.rendered}</h3>`;
+        introContainer.innerHTML = `<p>${recipe.excerpt.rendered}</p>`;
         imageContainer.innerHTML = `<img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">`;
-        modalContainer.innerHTML = `<div class="modal-content>
-                                    <span class="close">&times;</span>
+        modalContainer.innerHTML = `<button class="close-modal">X</button>
                                     <img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" width="100%" alt="recipe-picture">
-                                    </div>`;
+                                    `;
 
-        instructionContainer.innerHTML = `<p>${recipe.content.rendered}</p>`;
+        ingredientsContainer.innerHTML = `<h2>Ingredients</h2>
+                                            ${recipe.content.rendered}`;
+        instructionContainer.innerHTML = `<h2>Instructions</h2>
+                                            ${recipe.content.rendered}`;
 
-        commentsContainer.innerHTML = `<h2>Comments</h2>
+        commentsContainer.innerHTML += `<h2>Comments</h2>
                                             <fieldset>
                                                 <div class="comment-author">
                                                     <h3>Author name</h3>
@@ -72,19 +74,21 @@ async function fetchRecipe () {
 fetchRecipe();
 
 
+// IMAGE MODAL
+
+const closeButton = document.querySelector(".close-modal");
+
 imageContainer.onclick = function() {
-    modalContainer.style.display = "block";
+    modalContainer.style.display = "block";;
 }
 
-closeButton.onclick = function() {
-    modalContainer.style.display = "none";
-}
-
-window.onclick = function(e) {
-    if(e.target !== modalContainer) {
-        modalContainer.style.display = "none";
+window.onclick = function(event) {
+    if (event.target === modalContainer) {
+      modalContainer.style.display = "none";
     }
 }
+
+
 
 
 
