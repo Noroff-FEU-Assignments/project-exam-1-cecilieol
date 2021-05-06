@@ -29,15 +29,18 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+
+        <div class="image-modal"></div>
+
+        <div class="breadcrumbs">
+            <p><a href="index.html">Home </a></p>
+            <p><a href="allrecipes.html"> / All Recipes</a></p>
+            <div class="current-page"></div>
+        </div>
     </header>
-    <div class="image-modal"></div>
+    
     <main>
         <section class="recipe-container">
-            <div class="breadcrumbs">
-                <p><a href="index.html">Home </a></p>
-                <p><a href="allrecipes.html"> / All Recipes</a></p>
-                <div class="current-page"></div>
-            </div>
             <div class="loading">
                 <div class="loading-dot"></div>
                 <div class="loading-dot"></div>
@@ -46,7 +49,11 @@
             <div class="name-container"></div>
             <div class="intro-container"></div>
             <div class="image-container"></div>
-            <div class="instruction-container"></div>
+
+            <section class="recipe-text">
+                <div class="ingredients-container"></div>
+                <div class="instruction-container"></div>
+            </section>
             <hr>
             <div class="comments-container"></div>
         </section>
