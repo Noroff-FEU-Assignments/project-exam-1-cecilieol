@@ -20,7 +20,7 @@ async function getRecipes() {
 
             recipeContainer.innerHTML += `<div class="single-recipe">
                                                 <a href="recipe.html?id=${recipes[i].id}">
-                                                    <img src="${recipes[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                                    <img src="${recipes[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipes[i].title.rendered}">
                                                     <h3>${recipes[i].title.rendered}</h3>
                                                 </a>
                                             </div>`;

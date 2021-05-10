@@ -35,9 +35,9 @@ async function fetchRecipe () {
         breadcrumbContainer.innerHTML = `<p> / ${recipe.title.rendered}</p>`;
         nameContainer.innerHTML = `<h1>${recipe.title.rendered}</h1>`;
         introContainer.innerHTML = `<p>${recipe.excerpt.rendered}</p>`;
-        imageContainer.innerHTML = `<img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">`;
+        imageContainer.innerHTML = `<img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe.title.rendered}">`;
         modalContainer.innerHTML = `<button class="close-modal">X</button>
-                                    <img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" width="100%" alt="recipe-picture">
+                                    <img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" width="100%" alt="${recipe.title.rendered}">
                                     `;
 
         ingredientsContainer.innerHTML = `<h2>Ingredients</h2>

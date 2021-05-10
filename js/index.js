@@ -25,7 +25,7 @@ async function getFeatured() {
 
             latestContainer.innerHTML += `<div class="latest-item">
                                                 <a href="recipe.html?id=${recipe[i].id}">
-                                                    <img src="${recipe[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                                    <img src="${recipe[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[i].title.rendered}">
                                                     <h3>${recipe[i].title.rendered}</h3>
                                                 </a>
                                             </div>`;
@@ -50,25 +50,25 @@ async function getFeatured() {
 
           quickContainer.innerHTML = `<div class="quick-item">
                                             <a href="recipe.html?id=${recipe[0].id}">
-                                              <img src="${recipe[0]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                              <img src="${recipe[0]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[0].title.rendered}">
                                               <h3>${recipe[0].title.rendered}</h3>
                                             </a>
                                         </div>
                                         <div class="quick-item">
                                             <a href="recipe.html?id=${recipe[3].id}">
-                                              <img src="${recipe[3]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                              <img src="${recipe[3]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[3].title.rendered}">
                                               <h3>${recipe[3].title.rendered}</h3>
                                             </a>
                                         </div>
                                         <div class="quick-item">
                                             <a href="recipe.html?id=${recipe[5].id}">
-                                              <img src="${recipe[5]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                              <img src="${recipe[5]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[5].title.rendered}">
                                               <h3>${recipe[5].title.rendered}</h3>
                                             </a>
                                         </div>
                                         <div class="quick-item">
                                             <a href="recipe.html?id=${recipe[7].id}">
-                                              <img src="${recipe[7]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                              <img src="${recipe[7]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[7].title.rendered}">
                                               <h3>${recipe[7].title.rendered}</h3>
                                             </a>
                                         </div>`;
@@ -80,25 +80,25 @@ async function getFeatured() {
           
           weekendContainer.innerHTML = `<div class="weekend-item">
                                             <a href="recipe.html?id=${recipe[4].id}">
-                                              <img src="${recipe[4]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                              <img src="${recipe[4]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[4].title.rendered}">
                                               <h3>${recipe[4].title.rendered}</h3>
                                             </a>
                                         </div>
                                         <div class="weekend-item">
                                             <a href="recipe.html?id=${recipe[8].id}">
-                                              <img src="${recipe[8]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                              <img src="${recipe[8]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[8].title.rendered}">
                                               <h3>${recipe[8].title.rendered}</h3>
                                             </a>
                                         </div>
                                         <div class="weekend-item">
                                             <a href="recipe.html?id=${recipe[10].id}">
-                                              <img src="${recipe[10]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                              <img src="${recipe[10]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[10].title.rendered}">
                                               <h3>${recipe[10].title.rendered}</h3>
                                             </a>
                                         </div>
                                         <div class="weekend-item">
                                             <a href="recipe.html?id=${recipe[11].id}">
-                                              <img src="${recipe[11]._embedded['wp:featuredmedia']['0'].source_url}" alt="recipe-picture">
+                                              <img src="${recipe[11]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[11].title.rendered}">
                                               <h3>${recipe[11].title.rendered}</h3>
                                             </a>
                                         </div>`;
