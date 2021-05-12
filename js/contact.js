@@ -9,6 +9,9 @@ const subjectError = document.querySelector("#subject-error");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#message-error");
 const button = document.querySelector(".submit-button");
+const contactModal = document.querySelector(".contact-modal");
+const returnButton = document.querySelector(".return");
+const newButton = document.querySelector(".contact-new");
 
 
 function validateForm(event) {
@@ -51,13 +54,25 @@ form.addEventListener("submit", validateForm);
 
 function submitForm(event) {
     if((fullName.value.trim().length > 5) && (validateEmail(email.value)) && (subject.value.trim().length > 15) && (message.value.trim().length > 25)) {
-        submittedForm.innerHTML = `<p>Your form was successfully submitted!</p>`;
+        contactModal.style.display = "flex";
     } else {
-        submittedForm.innerHTML = "";
+        contactModal.style.display = "none";
     }
 }
 
 form.addEventListener("submit", submitForm);
+
+window.onclick = function(event) {
+    if (event.target === returnButton) {
+        window.location.href = "http://cecilieolsen-project-exam-1.netlify.app/";
+      }
+
+    if (event.target === newButton) {
+      contactModal.style.display = "none";
+      location.reload();
+    }
+}
+
 
 function validateEmail(email) { 
     const regEx = /\S+@\S+\.\S+/;
