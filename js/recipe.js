@@ -2,7 +2,6 @@
 
 const titleContainer = document.querySelector("title");
 const modalContainer = document.querySelector(".image-modal");
-const breadcrumbContainer = document.querySelector(".current-page")
 const recipeContainer = document.querySelector(".recipe.container");
 const introContainer = document.querySelector(".intro-container");
 const nameContainer = document.querySelector(".name-container");
@@ -32,12 +31,11 @@ async function fetchRecipe () {
         console.log(recipe);
 
         titleContainer.innerHTML = `The Green Kitchen - ${recipe.title.rendered}`;
-        breadcrumbContainer.innerHTML = `<p> / ${recipe.title.rendered}</p>`;
         nameContainer.innerHTML = `<h1>${recipe.title.rendered}</h1>`;
         introContainer.innerHTML = `<p>${recipe.excerpt.rendered}</p>`;
         imageContainer.innerHTML = `<img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe.title.rendered}">`;
-        modalContainer.innerHTML = `<button class="close-modal">X</button>
-                                    <img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" width="100%" alt="${recipe.title.rendered}">
+        modalContainer.innerHTML = `<img src="${recipe._embedded['wp:featuredmedia']['0'].source_url}" width="100%" alt="${recipe.title.rendered}">
+                                    <p>${recipe.title.rendered}</p>
                                     `;
 
         ingredientsContainer.innerHTML = `<h2>Ingredients</h2>
