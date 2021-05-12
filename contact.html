@@ -42,12 +42,20 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+
+        <div class="contact-modal">
+            <div class="success-message">
+                <h4>Your form has been submitted!</h4>
+                <div class="contact-modal-buttons">
+                    <button class="return">Return to home page</button>
+                    <button class="contact-new">Submit a new inquiry</button>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
 
-        <div class="breadcrumbs">
-            <p class="previous-page">Go back</p>
-        </div>
+        <button class="return-button">Go back</button>
         
         <H1>Contact</H1>
 
@@ -70,18 +78,41 @@
                 <div class="form-error" id="message-error">Please write a message (more than 25 characters)</div>
                 <br />
                 <button class ="submit-button">Submit</button>
-                <div class="submitted-form"></div>
               </form>
           </div>
 
     </main>
     <footer>
-        <h3>Follow us on social media</h3>
-        <p>Facebook</p>
-        <p>Youtube</p>
-        <p>Instagram</p>
-        <h3>Browse more</h3>
+        <div class="footer-row">
+        <div class="footer-column">
+            <h3>Follow us on social media</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="visuals/facebook.png"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="visuals/instagram.png"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="visuals/youtube.png"></a>
+                <a href="https://www.snapchat.com" target="_blank"><img src="visuals/snapchat.png"></a>
+                <a href="https://www.tiktok.com" target="_blank"><img src="visuals/tik-tok.png"></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Browse more</h3>
+            <div class="browse-list">
+                <a href="allrecipes.html">All Recipes</a>
+                <a href="about.html">About The Green Kitchen</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Latest posts</h3>
+            <div class="latest-list"></div>
+        </div>
+    </div>
+        <div class="footer-bottom">
+            <p>© Cecilie Olsen, Project Exam spring 2021</p>
+        </div>
     </footer>
     <script src="js/contact.js"></script>
+    <script src="js/goback.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>
