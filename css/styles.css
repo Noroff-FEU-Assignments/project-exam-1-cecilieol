@@ -49,26 +49,15 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 25, 0);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img {
   border-radius: 3px;
-}
-
-.breadcrumbs a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumbs {
-  padding-left: 10px;
-  display: inline-flex;
-  width: 100%;
-  height: auto;
-}
-
-.breadcrumbs p {
-  font-size: 16px;
 }
 
 .return-button {
@@ -143,10 +132,6 @@ nav a {
   font-size: 20px;
   color: black;
   margin: 5px 30px 5px 30px;
-}
-
-nav a:hover {
-  text-decoration: none;
 }
 
 .search-bar-mobile {
