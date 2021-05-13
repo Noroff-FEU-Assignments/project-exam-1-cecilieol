@@ -52,6 +52,13 @@ function validateForm(event) {
 
 form.addEventListener("submit", validateForm);
 
+function validateEmail(email) { 
+    const regEx = /\S+@\S+\.\S+/;
+    const validEmail = regEx.test(email);    
+    
+    return validEmail;
+}
+
 function submitForm(event) {
     if((fullName.value.trim().length > 5) && (validateEmail(email.value)) && (subject.value.trim().length > 15) && (message.value.trim().length > 25)) {
         contactModal.style.display = "flex";
@@ -73,10 +80,10 @@ window.onclick = function(event) {
     }
 }
 
+const returnButtonContact = document.querySelector(".return-button");
 
-function validateEmail(email) { 
-    const regEx = /\S+@\S+\.\S+/;
-    const validEmail = regEx.test(email);    
-    
-    return validEmail;
+function previousPage() {
+    window.history.back();
 }
+
+returnButtonContact.addEventListener("click", previousPage);
