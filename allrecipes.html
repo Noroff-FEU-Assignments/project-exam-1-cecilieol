@@ -49,17 +49,33 @@
     </header>
     <main>
         <button class="return-button">Go back</button>
+
+        
         
         <h1>Recipes</h1>
         <aside class="viewing-options">
-            <h2>Sort by</h2>
-            <div class="sorting">
+            <label for="sorting-menu">
+                <div id="sorting-menu-click">
+                    <h2>Sort by</h2>
+                </div>
+              </label>
+              <input type="checkbox" id="sorting-menu">
+              
+            <div class="sorting-options">
                 <p>Latest</p>
                 <p>Popularity</p>
                 <p>A-Z</p>
             </div>
 
-            <h2>Preferences</h2>
+            <label for="filter-menu">
+                <div id="filter-menu-click">
+                    <h2>Filter by</h2>
+                </div>
+              </label>
+              <input type="checkbox" id="filter-menu">
+
+            <section class="filter-options">
+            <h3>Preferences</h3>
             <div class="filtering">
                 <p>Dairy Free</p>
                 <p>Gluten Free</p>
@@ -67,7 +83,7 @@
                 <p>Vegetarian</p>
             </div>
 
-            <h2>Occasion</h2>
+            <h3>Occasion</h3>
             <div class="filtering">
                 <p>Breakfast</p>
                 <p>Lunch</p>
@@ -77,6 +93,7 @@
                 <p>Holiday</p>
                 <p>Weekend</p>
             </div>
+        </section>
         </aside>
 
         <section class="all-recipes">
