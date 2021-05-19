@@ -52,12 +52,12 @@ a {
   color: rgb(0, 25, 0);
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 img {
   border-radius: 3px;
+}
+
+img:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .return-button {
@@ -88,8 +88,16 @@ img {
   box-shadow: none;
 }
 
+.logo:hover {
+  box-shadow: none;
+}
+
 nav {
   display: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 #hamburger {
@@ -368,7 +376,7 @@ nav input[type="text"] {
   border: none;
   font-size: 16px;
   margin: 15px;
-  width: 100px;
+  width: 120px;
   height: 30px;
   cursor: pointer;
 }
@@ -476,7 +484,7 @@ nav input[type="text"] {
   padding-top: 300px;
   margin-top: -250px;
   max-width: 3000px;
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0, 0.7);
 }
 
 .image-modal img {
@@ -559,7 +567,7 @@ input[type="text"] {
   padding-top: 300px;
   margin-top: -250px;
   max-width: 3000px;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.7);
 }
 
 .success-message {
@@ -591,6 +599,43 @@ input[type="text"] {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* About */
+
+.about-image img {
+  width: 100%;
+}
+
+.about-image {
+  margin-top: 15px;
+}
+
+.about-image img:hover {
+  box-shadow: none;
+}
+
+.about-text {
+  width: 100%;
+}
+
+#about {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.browse-recipes,
+.contact-us {
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(176, 228, 176);
+  font-weight: 600;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 /* Footer */
 
 footer {
@@ -598,6 +643,10 @@ footer {
   height: auto;
   padding: 15px;
   text-align: center;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 .footer-row {
@@ -620,6 +669,10 @@ footer {
 .social-icons img {
   width: 30px;
   padding: 15px;
+}
+
+.social-icons img:hover {
+  box-shadow: none;
 }
 
 .browse-list a,
@@ -785,10 +838,26 @@ footer {
     max-width: 1000px;
   }
 
+  .about-image {
+    margin-left: 20px;
+  }
+
+  .about-image img {
+    max-width: 700px;
+  }
+
   .about-text {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 20px;
+  }
+
+  #about {
+    display: flex;
+  }
+
+  .browse-recipes,
+  .contact-us {
+    width: 45%;
+    margin-right: 15px;
   }
 }
 
