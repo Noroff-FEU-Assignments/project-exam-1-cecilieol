@@ -251,8 +251,8 @@ nav input[type="text"] {
 .arrow-container {
   display: flex;
   justify-content: space-around;
-  width: 95%;
-  margin-top: -55px;
+  max-width: 1000px;
+  margin: -55px 10px 0 10px;
   position: relative;
 }
 
