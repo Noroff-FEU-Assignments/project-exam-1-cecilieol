@@ -252,7 +252,7 @@ nav input[type="text"] {
   display: flex;
   justify-content: space-around;
   max-width: 1000px;
-  margin: -55px 20px 0 20px;
+  margin-top: -55px;
   position: relative;
 }
 
@@ -271,7 +271,7 @@ nav input[type="text"] {
 }
 
 .prev {
-  margin-right: 300px;
+  margin-right: 280px;
 }
 
 .dot-container {
