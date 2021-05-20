@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #fefefe;
+  background-color: #fcfcfc;
 }
 
 main {
@@ -16,8 +16,11 @@ h1,
 h2,
 h3,
 h4,
-p {
-  color: rgb(30, 30, 30);
+p,
+ol,
+ul,
+li {
+  color: rgb(0, 29, 5);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -51,7 +54,7 @@ li {
 
 a {
   text-decoration: none;
-  color: rgb(0, 30, 0);
+  color: rgb(0, 39, 0);
 }
 
 img {
@@ -83,7 +86,7 @@ button:hover {
 /* Header */
 
 .header-top {
-  background-color: #fefefe;
+  background-color: #fcfcfc;
   padding: 20px 0 24px 20px;
   height: 60px;
   margin: 0;
@@ -135,6 +138,10 @@ nav a:hover {
   background-color: #000;
 }
 
+nav ul {
+  padding-inline-start: 0;
+}
+
 nav li {
   list-style-type: none;
   text-align: center;
@@ -144,8 +151,7 @@ nav a {
   text-decoration: none;
   line-height: 200%;
   font-size: 20px;
-  color: black;
-  margin: 5px 30px 5px 30px;
+  color: rgb(0, 29, 5);
 }
 
 .search-bar-mobile {
@@ -153,9 +159,13 @@ nav a {
 }
 
 .search-bar-mobile img {
-  margin: 15px 15px 0 10px;
-  width: 25px;
-  height: 25px;
+  margin: 18px 15px 0 -48px;
+  width: 23px;
+  height: 23px;
+}
+
+.search-bar-mobile img:hover {
+  box-shadow: none;
 }
 
 nav input[type="text"] {
@@ -398,6 +408,8 @@ nav input[type="text"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #more-button {
@@ -554,10 +566,8 @@ nav input[type="text"] {
 }
 
 .form {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 35px;
-  width: 95%;
+  width: 92%;
   border: 1px solid #aaa;
   padding: 20px;
   max-width: 860px;
@@ -592,7 +602,7 @@ input[type="text"] {
   background-color: rgb(176, 228, 176);
   border-radius: 3px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  color: black;
+  color: rgb(0, 29, 5);
   font-size: 16px;
   font-weight: 600;
   border: none;
@@ -737,7 +747,7 @@ footer a:hover {
 
 @media screen and (max-width: 400px) {
   .header-top {
-    background-color: #eee;
+    background-color: #fcfcfc;
     padding: 20px 0 20px 20px;
     height: 44px;
     margin: 0;
@@ -781,7 +791,7 @@ footer a:hover {
 
   .header-top {
     height: 90px;
-    background-color: #fefefe;
+    background-color: #fcfcfc;
     display: flex;
     justify-content: center;
   }
@@ -811,6 +821,10 @@ footer a:hover {
     text-align: center;
     padding-right: 25px;
     padding-left: 25px;
+  }
+
+  nav a {
+    margin: 5px 30px 5px 30px;
   }
 
   .search-bar-mobile {
@@ -864,7 +878,7 @@ footer a:hover {
     margin: 0;
     padding: 0 0 5px 0;
     border-radius: none;
-    background-color: white;
+    background-color: transparent;
   }
 
   .recipe-container {
@@ -903,6 +917,11 @@ footer a:hover {
   .contact-us {
     width: 45%;
     margin-right: 15px;
+  }
+
+  .form {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
