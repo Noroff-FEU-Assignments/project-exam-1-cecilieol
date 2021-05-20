@@ -30,13 +30,13 @@ async function getFeatured() {
                                                 </a>
                                             </div>`;
 
-            arrowContainer.innerHTML = `<button class="prev" onclick="prevSlide(-1)">&#10094;</button>
-                                        <button class="next" onclick="nextSlide(1)">&#10095;</button>`;
+            arrowContainer.innerHTML = `<button class="prev" onclick="prevRecipe(-1)">&#10094;</button>
+                                        <button class="next" onclick="nextRecipe(1)">&#10095;</button>`;
             
-            dotContainer.innerHTML = `<button class="dot current" onclick="currentSlide(1)"></button>
-                                      <button class="dot" onclick="currentSlide(2)"></button>
-                                      <button class="dot" onclick="currentSlide(3)"></button>
-                                      <button class="dot" onclick="currentSlide(4)"></button>`;
+            dotContainer.innerHTML = `<button class="dot current" onclick="currentRecipe(1)"></button>
+                                      <button class="dot" onclick="currentRecipe(2)"></button>
+                                      <button class="dot" onclick="currentRecipe(3)"></button>
+                                      <button class="dot" onclick="currentRecipe(4)"></button>`;
 
             if (i === 3) {
                 break;
@@ -124,38 +124,38 @@ getFeatured();
 var slideIndex = 1;
 initSlides(slideIndex);
 
-function nextSlide(x) {
+function nextRecipe(x) {
   initSlides(slideIndex += x);
 }
 
-function prevSlide(x) {
+function prevRecipe(x) {
   initSlides(slideIndex += x);
 }
 
-function currentSlide(x) {
+function currentRecipe(x) {
   initSlides(slideIndex = x);
 }
 
 function initSlides(x) {
-  const slide = document.querySelectorAll(".latest-item");
-  const dot = document.querySelectorAll(".dot");
+  const slideItem = document.querySelectorAll(".latest-item");
+  const slideDot = document.querySelectorAll(".dot");
 
   if (x < 1) {
-    slideIndex = slide.length;
+    slideIndex = slideItem.length;
   } 
 
-  if (x > slide.length) {
+  if (x > slideItem.length) {
     slideIndex = 1;
   }
 
-  for (i = 0; i < slide.length; i++) {
-    slide[i].style.display = "none"; 
+  for (i = 0; i < slideItem.length; i++) {
+    slideItem[i].style.display = "none"; 
   }
 
-  for (i = 0; i < dot.length; i++) {
-    dot[i].className = dot[i].className.replace(" current", "");
+  for (i = 0; i < slideDot.length; i++) {
+    slideDot[i].className = slideDot[i].className.replace(" current", "");
   }
   
-  slide[slideIndex-1].style.display = "block"; 
-  dot[slideIndex-1].className += " current";
+  slideItem[slideIndex-1].style.display = "block"; 
+  slideDot[slideIndex-1].className += " current";
 }

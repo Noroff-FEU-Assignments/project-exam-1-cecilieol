@@ -74,8 +74,6 @@ fetchRecipe();
 
 // IMAGE MODAL
 
-const closeButton = document.querySelector(".close-modal");
-
 imageContainer.onclick = function() {
     modalContainer.style.display = "block";;
 }
@@ -85,19 +83,3 @@ window.onclick = function(event) {
       modalContainer.style.display = "none";
     }
 }
-
-
-
-
-
-
-// commentsContainer.innerHTML += `<div class="comment-author">
-//                                     <h3>${recipe._embedded.replies[0].author_name}</h3>
-//                                 </div>
-//                                 <div class="comment-content">
-//                                     <p>${recipe._embedded.replies[0].content.rendered}</p>
-//                                 </div>
-//                                 <div class="comment-date">
-//                                     <p>${recipe._embedded.replies[0].date}</p>
-//                                 </div>`;
-

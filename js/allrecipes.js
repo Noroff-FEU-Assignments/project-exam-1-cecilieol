@@ -28,7 +28,6 @@ async function getRecipes() {
 
             moreButton.style.display = "block";
 
-
         }
 
     } catch(error) {
