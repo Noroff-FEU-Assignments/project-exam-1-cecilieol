@@ -159,12 +159,9 @@ nav a {
 }
 
 .search-bar-mobile img {
-  margin: 15px 15px 0 -50px;
+  margin: 18px 15px 0 -48px;
   width: 23px;
   height: 23px;
-  background-color: rgb(39, 202, 39);
-  padding: 3px 3px 4px 3px;
-  border-radius: 0 4px 4px 0;
 }
 
 .search-bar-mobile img:hover {
