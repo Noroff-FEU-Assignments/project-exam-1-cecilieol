@@ -39,22 +39,61 @@ async function fetchRecipe () {
                                     `;
 
         ingredientsContainer.innerHTML = `<h2>Ingredients</h2>
-                                            ${recipe.content.rendered}`;
+                                            ${recipe.content.rendered}
+                                            <br>`;
         instructionContainer.innerHTML = `<h2>Instructions</h2>
-                                            ${recipe.content.rendered}`;
+                                            ${recipe.content.rendered}
+                                            <br>`;
 
-        commentsContainer.innerHTML += `<h2>Comments</h2>
-                                            <fieldset>
-                                                <div class="comment-author">
-                                                    <h3>Author name</h3>
+        commentsContainer.innerHTML += `<form>
+                                            <h3>Write a comment</h3>
+                                                <p>Your name</p>
+                                                <input type="text" id="comment-name" name="comment-name" />
+                
+                                                <p>Your comment</p>
+                                                <textarea id="comment-message" name="comment-message"></textarea>
+                
+                                                <input type="submit" value="Submit" id="submit-comment" disabled>
+                                                <div class="comment-error">
+                                                    <p>Submitting a comment is not possible at this time. Please try again later.</p>
                                                 </div>
-                                                 <div class="comment-content">
-                                                    <p>Comment text here</p>
-                                                </div>
-                                                 <div class="comment-date">
-                                                    <p>Date: 27/04/2021</p>
-                                                </div>
-                                             </fieldset>`;
+                                            </form>
+                                            <section class="comment-section">
+                                            <h3>Recent comments</h3>
+                                                    <fieldset>
+                                                        <div class="comment-author">
+                                                            <h4>Author name</h4>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            <p>Comment text here</p>
+                                                        </div>
+                                                            <div class="comment-date">
+                                                            <p>Date: 27/04/2021</p>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <div class="comment-author">
+                                                            <h4>Author name</h4>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            <p>Comment text here</p>
+                                                        </div>
+                                                            <div class="comment-date">
+                                                            <p>Date: 27/04/2021</p>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <div class="comment-author">
+                                                            <h4>Author name</h4>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            <p>Comment text here</p>
+                                                        </div>
+                                                            <div class="comment-date">
+                                                            <p>Date: 27/04/2021</p>
+                                                        </div>
+                                                    </fieldset>
+                                             </section>`;
 
         loader.innerHTML = "";
 
