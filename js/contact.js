@@ -72,11 +72,11 @@ form.addEventListener("submit", submitForm);
 window.onclick = function(event) {
     if (event.target === returnButton) {
         window.location.href = "http://cecilieolsen-project-exam-1.netlify.app/";
-      }
+    }
 
     if (event.target === newButton) {
-      contactModal.style.display = "none";
-      location.reload();
+        contactModal.style.display = "none";
+        location.reload();
     }
 }
 
