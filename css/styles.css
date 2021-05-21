@@ -159,9 +159,12 @@ nav a {
 }
 
 .search-bar-mobile img {
-  margin: 18px 15px 0 -48px;
+  margin: 15px 15px 0 -50px;
   width: 23px;
   height: 23px;
+  background-color: rgb(39, 202, 39);
+  padding: 3px 3px 4px 3px;
+  border-radius: 0 4px 4px 0;
 }
 
 .search-bar-mobile img:hover {
@@ -474,7 +477,7 @@ nav input[type="text"] {
 
 .image-container img {
   width: 100%;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .ingredients-container h3,
@@ -489,6 +492,7 @@ nav input[type="text"] {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 
 .ingredients-container {
@@ -513,10 +517,36 @@ nav input[type="text"] {
 }
 
 .comments-container {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.comments-container h3 {
+.comments-container form {
+  width: 100%;
+}
+
+.comments-container form p {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+#comment-name {
+  width: 100%;
+}
+
+#comment-message {
+  width: 100%;
+  height: 150px;
+  max-width: 900px;
+  max-height: 500px;
+}
+
+.comment-section {
+  display: block;
+  width: 100%;
+}
+
+.comment-section h4 {
   border-bottom: 1px solid #aaa;
 }
 
@@ -525,6 +555,11 @@ nav input[type="text"] {
   border: none;
   border-radius: 10px;
   margin-bottom: 15px;
+}
+
+.comment-error p {
+  color: rgb(209, 30, 30);
+  font-style: italic;
 }
 
 /* Image modal */
@@ -538,10 +573,12 @@ nav input[type="text"] {
   margin-top: -250px;
   max-width: 10000px;
   background-color: rgb(0, 0, 0, 0.7);
+  cursor: pointer;
 }
 
 .image-modal img {
   max-width: 1200px;
+  cursor: auto;
 }
 
 .image-modal p {
@@ -591,11 +628,12 @@ input[type="text"] {
 }
 
 .form-error {
-  color: red;
+  color: rgb(209, 30, 30);
   display: none;
 }
 
-.submit-button {
+.submit-button,
+#submit-comment {
   margin-top: 10px;
   width: 100%;
   height: 35px;
@@ -607,6 +645,12 @@ input[type="text"] {
   font-weight: 600;
   border: none;
   cursor: pointer;
+}
+
+#submit-comment {
+  width: 101%;
+  color: rgb(131, 130, 130);
+  cursor: auto;
 }
 
 .contact-modal {
@@ -772,6 +816,10 @@ footer a:hover {
 
   .success-message {
     max-height: 200px;
+  }
+
+  #comment-message {
+    max-width: 400px;
   }
 }
 
@@ -943,13 +991,38 @@ footer a:hover {
   }
 
   .ingredients-container {
-    width: 400px;
-    margin-right: 25px;
+    width: 430px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .instruction-container {
-    width: 400px;
-    margin-left: 25px;
+    width: 430px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .comments-container form {
+    width: 390px;
+    margin-left: 10px;
+    margin-right: 50px;
+  }
+
+  #comment-name {
+    width: 100%;
+  }
+
+  #comment-message {
+    width: 100%;
+    height: 150px;
+    max-width: 390px;
+  }
+
+  .comment-section {
+    display: block;
+    width: 430px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
