@@ -71,7 +71,7 @@ form.addEventListener("submit", submitForm);
 
 window.onclick = function(event) {
     if (event.target === returnButton) {
-        window.location.href = "http://cecilieolsen-project-exam-1.netlify.app/";
+        window.location.href = "http://project-exam-1-cecilieolsen.netlify.app/";
     }
 
     if (event.target === newButton) {
