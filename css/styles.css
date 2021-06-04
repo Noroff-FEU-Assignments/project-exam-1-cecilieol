@@ -87,13 +87,13 @@ button:hover {
 
 .header-top {
   background-color: #fcfcfc;
-  padding: 20px 0 24px 20px;
-  height: 60px;
+  padding: 20px 0 20px 20px;
+  height: 44px;
   margin: 0;
 }
 
 .logo {
-  width: 60%;
+  width: 70%;
   box-shadow: none;
 }
 
@@ -123,7 +123,7 @@ nav a:hover {
   background-color: rgb(176, 228, 176);
   display: block;
   position: absolute;
-  padding: 30px 15px 30px 15px;
+  padding: 20px 15px 20px 15px;
   right: 0;
   top: 0;
 }
@@ -373,12 +373,18 @@ nav input[type="text"] {
   padding: 5px;
   border-radius: 8px;
   background-color: rgb(176, 228, 176);
+  cursor: pointer;
+}
+
+.sorting-options p:hover,
+.filtering p:hover {
+  font-weight: 600;
 }
 
 .all-recipes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: end;
   overflow: hidden;
 }
 
@@ -534,7 +540,7 @@ nav input[type="text"] {
 #comment-message {
   width: 100%;
   height: 150px;
-  max-width: 900px;
+  max-width: 400px;
   max-height: 500px;
 }
 
@@ -574,7 +580,7 @@ nav input[type="text"] {
 }
 
 .image-modal img {
-  max-width: 1200px;
+  max-width: 1000px;
   cursor: auto;
 }
 
@@ -601,7 +607,7 @@ nav input[type="text"] {
 
 .form {
   margin-bottom: 35px;
-  width: 92%;
+  width: 90%;
   border: 1px solid #aaa;
   padding: 20px;
   max-width: 860px;
@@ -670,7 +676,7 @@ input[type="text"] {
   margin: 10px;
   padding: 30px;
   width: 100%;
-  max-height: 100px;
+  max-height: 200px;
   max-width: 500px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -693,12 +699,12 @@ input[type="text"] {
 
 /* About */
 
-.about-image img {
-  width: 100%;
-}
-
 .about-image {
   margin-top: 15px;
+}
+
+.about-image img {
+  width: 100%;
 }
 
 .about-image img:hover {
@@ -786,37 +792,30 @@ footer a:hover {
 
 /* MEDIA */
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 400px) {
   .header-top {
-    background-color: #fcfcfc;
-    padding: 20px 0 20px 20px;
-    height: 44px;
-    margin: 0;
+    padding: 20px 0 24px 20px;
+    height: 60px;
   }
 
   .logo {
-    width: 70%;
+    width: 60%;
   }
 
   #hamburger-icon {
-    background-color: rgb(176, 228, 176);
-    display: block;
-    position: absolute;
-    padding: 20px 15px 20px 15px;
-    right: 0;
-    top: 0;
+    padding: 30px 15px 30px 15px;
   }
 
   .form {
-    width: 90%;
+    width: 92%;
   }
 
   .success-message {
-    max-height: 200px;
+    max-height: 100px;
   }
 
   #comment-message {
-    max-width: 400px;
+    max-width: 900px;
   }
 }
 
@@ -828,17 +827,16 @@ footer a:hover {
 }
 
 @media screen and (min-width: 800px) {
+  .header-top {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+  }
+
   .logo {
     width: auto;
     max-width: 450px;
     padding-right: 20px;
-  }
-
-  .header-top {
-    height: 90px;
-    background-color: #fcfcfc;
-    display: flex;
-    justify-content: center;
   }
 
   #hamburger-icon {
@@ -863,7 +861,6 @@ footer a:hover {
 
   nav li {
     display: inline-flex;
-    text-align: center;
     padding-right: 25px;
     padding-left: 25px;
   }
@@ -880,6 +877,18 @@ footer a:hover {
     margin-right: 500px;
   }
 
+  .sorting-options p,
+  .filtering p {
+    margin: 0;
+    padding: 0 0 5px 0;
+    border-radius: none;
+    background-color: transparent;
+  }
+
+  .single-recipe img {
+    width: 240px;
+  }
+
   .desktop-headline {
     display: block;
   }
@@ -892,11 +901,6 @@ footer a:hover {
   .filter-options,
   .filtering {
     display: block;
-  }
-
-  #sorting-menu,
-  #filter-menu {
-    display: none;
   }
 
   #sorting-menu:checked ~ .sorting-options {
@@ -914,18 +918,6 @@ footer a:hover {
     clear: both;
   }
 
-  .single-recipe img {
-    width: 240px;
-  }
-
-  .sorting-options p,
-  .filtering p {
-    margin: 0;
-    padding: 0 0 5px 0;
-    border-radius: none;
-    background-color: transparent;
-  }
-
   .recipe-container {
     max-width: 900px;
     margin-left: auto;
@@ -934,12 +926,12 @@ footer a:hover {
 
   .image-modal {
     text-align: center;
-    width: 100%;
     padding-top: 70px;
   }
 
-  .image-modal img {
-    max-width: 1000px;
+  .form {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .about-image {
@@ -962,11 +954,6 @@ footer a:hover {
   .contact-us {
     width: 45%;
     margin-right: 15px;
-  }
-
-  .form {
-    margin-right: auto;
-    margin-left: auto;
   }
 }
 
@@ -1005,18 +992,11 @@ footer a:hover {
     margin-right: 50px;
   }
 
-  #comment-name {
-    width: 100%;
-  }
-
   #comment-message {
-    width: 100%;
-    height: 150px;
     max-width: 390px;
   }
 
   .comment-section {
-    display: block;
     width: 430px;
     margin-left: 10px;
     margin-right: 10px;
