@@ -5,6 +5,7 @@ const url = "https://cecilieol.no/the-green-kitchen/wp-json/wp/v2/posts?_embed&p
 const recipeContainer = document.querySelector(".all-recipes");
 const moreButton= document.querySelector("#more-button");
 
+
 async function getRecipes() {
     try {
         const response = await fetch(url);
@@ -16,7 +17,7 @@ async function getRecipes() {
 
         for (let i = 0; i < recipes.length; i++) {
 
-            console.log(recipes[i].name);
+            console.log(recipes[i].title.rendered);
 
             recipeContainer.innerHTML += `<div class="single-recipe">
                                                 <a href="recipe.html?id=${recipes[i].id}">
@@ -44,6 +45,8 @@ async function getRecipes() {
 getRecipes();
 
 
+/* Load more button */
+
 let defaultItems = 9;
 
 moreButton.addEventListener("click", (e) => {
@@ -62,5 +65,3 @@ moreButton.addEventListener("click", (e) => {
         moreButton.style.display = "none";
     }
 })
-
-

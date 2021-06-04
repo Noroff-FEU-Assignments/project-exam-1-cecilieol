@@ -9,14 +9,10 @@ async function getAbout() {
         const aboutResponse = await fetch(urlAbout);
         const about = await aboutResponse.json();
 
-        console.log(about);
-
         aboutImage.innerHTML = "";
         aboutText.innerHTML = "";
 
         for (let i = 0; i < about.length; i++) {
-
-            console.log(about[i]);
 
             aboutImage.innerHTML = `<img src="${about[i]._embedded['wp:featuredmedia']['0'].source_url}" alt="${about[i]._embedded['wp:featuredmedia']['0'].alt_text}">`;
             aboutText.innerHTML = `<p>${about[i].content.rendered}</p>
@@ -28,9 +24,8 @@ async function getAbout() {
 
         }
 
-    } catch(error) {
-        console.log(error);
-        aboutText.innerHTML = displayError("An error occurred fetching information from the API");     
+    } catch (error) {
+        aboutText.innerHTML = displayError("An error occurred fetching information from the API");
     }
 }
 

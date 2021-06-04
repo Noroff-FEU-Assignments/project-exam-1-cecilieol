@@ -17,18 +17,12 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-console.log(id);
-
 const url = `https://cecilieol.no/the-green-kitchen/wp-json/wp/v2/posts/${id}?_embed`;
-
-console.log(url);
 
 async function fetchRecipe () {
     try {
         const response = await fetch(url);
         const recipe = await response.json();
-
-        console.log(recipe);
 
         titleContainer.innerHTML = `The Green Kitchen - ${recipe.title.rendered}`;
         nameContainer.innerHTML = `<h1>${recipe.title.rendered}</h1>`;
@@ -98,7 +92,6 @@ async function fetchRecipe () {
         loader.innerHTML = "";
 
     } catch(error) {
-        console.log(error);
         loader.innerHTML = "";
         if (recipeContainer.innerHTML = "") {
             recipeContainer.innerHTML = displayError("An error occurred when calling the API");

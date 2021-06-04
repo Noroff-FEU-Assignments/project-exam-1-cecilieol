@@ -13,15 +13,11 @@ async function getFeatured() {
         const response = await fetch(url);
         const recipe = await response.json();
 
-        console.log(recipe);
-
         latestContainer.innerHTML = "";
         quickContainer.innerHTML = "";
         weekendContainer.innerHTML = "";
 
         for (let i = 0; i < recipe.length; i++) {
-
-            console.log(recipe[i].name);
 
             latestContainer.innerHTML += `<div class="latest-item">
                                                 <a href="recipe.html?id=${recipe[i].id}">
@@ -45,8 +41,6 @@ async function getFeatured() {
         }
 
         for (let i = 0; i < recipe.length; i++) {
-
-          console.log(recipe[i].name);
 
           quickContainer.innerHTML = `<div class="quick-item">
                                             <a href="recipe.html?id=${recipe[0].id}">
@@ -76,8 +70,6 @@ async function getFeatured() {
 
         for (let i = 0; i < recipe.length; i++) {
 
-          console.log(recipe[i].name);
-          
           weekendContainer.innerHTML = `<div class="weekend-item">
                                             <a href="recipe.html?id=${recipe[4].id}">
                                               <img src="${recipe[4]._embedded['wp:featuredmedia']['0'].source_url}" alt="${recipe[4].title.rendered}">
@@ -106,7 +98,6 @@ async function getFeatured() {
         }
 
     } catch(error) {
-        console.log(error);
         if (latestContainer.innerHTML = "") {
             latestContainer.innerHTML = displayError("An error occurred when calling the API");
         } else {

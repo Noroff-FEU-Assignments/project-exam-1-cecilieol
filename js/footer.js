@@ -7,14 +7,10 @@ async function getList() {
         const listResponse = await fetch(postList);
         const list = await listResponse.json();
 
-        console.log(list);
-
         latestList.innerHTML = "";
 
         for (let i = 0; i < list.length; i++) { 
           
-            console.log(list[i].name);
-            
             latestList.innerHTML += `<a href="recipe.html?id=${list[i].id}">${list[i].title.rendered}</a>`
         
             if (i === 3) {
@@ -23,7 +19,6 @@ async function getList() {
           }
 
         } catch(error) {
-            console.log(error);
             if (latestList.innerHTML = "") {
                 latestList.innerHTML = displayError("An error occurred when calling the API");
             } else {
